@@ -3,6 +3,7 @@
 # Install
 
 To test the script for Shellshock vulnerability, you will need to have Go programming language installed on your system.
+
 It's a checker, it does not exploit any vulnerability.
 
 - Download the script or copy its code to a new file on your system.
