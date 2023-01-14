@@ -12,7 +12,7 @@ It's a checker, it does not exploit any vulnerability.
 - The script will send a request to the target URL with a specific payload that tests for the Shellshock vulnerability.
 - The script will then return a message indicating whether the target is vulnerable or not.
 
-
+# CVE-2014-7169
   
 Shellshock, also known as Bashdoor, is a family of security vulnerabilities that affect the Bash shell, a command-line interface commonly used on Linux and UNIX-based operating systems. The vulnerability allows an attacker to execute arbitrary commands on a vulnerable system by injecting specially crafted environment variables into the shell. The first and most well-known variant, known as CVE-2014-6271, was discovered in September 2014 and allows for the execution of arbitrary commands by appending a function definition to the end of the function definition of an environment variable. Subsequent variants, such as CVE-2014-7169, have been discovered which exploit different aspects of the vulnerability.
 
