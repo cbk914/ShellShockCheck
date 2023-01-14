@@ -1,5 +1,15 @@
 // Shellshock -CVE-2014–6271- Checker
 // Author: cbk914
+
+package main
+
+import (
+	"fmt"
+	"net/http"
+    "strings"
+    "flags"
+)
+
 func check_shellshock(url string) {
     // Create the request
     req, err := http.NewRequest("GET", url, nil)
