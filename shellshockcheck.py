@@ -15,8 +15,8 @@ def main():
     parsed_url = urlparse(args.url)
     if parsed_url.scheme not in ["http", "https"]:
         parsed_url = "https://" + parsed_url.geturl()
-    if not re.match(r"^[a-zA-Z0-9-.]+$", parsed_url.hostname):
-        parser.error("Invalid target format. Only URLs with valid hostname are allowed")
+    if not re.match(r"^[a-zA-Z0-9-.]+$", parsed_url.hostname) and not re.match(r"^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$", parsed_url.hostname):
+    parser.error("Invalid target format. Only URLs with valid hostname or IP address are allowed")
 
     # Send the request
     conn = http.client.HTTPSConnection(parsed_url.hostname)
