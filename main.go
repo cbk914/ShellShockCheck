@@ -4,10 +4,10 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"net/http"
-    "strings"
-    "flags"
+	"os"
 )
 
 func check_shellshock(url string) {
